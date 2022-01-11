@@ -16,7 +16,13 @@ interface Command {
   options?: CommandOption[];
 
   predicate?: (message: Message) => void;
-  execute: (args: any, message?: Message) => void;
+  execute: (args: Argument[], message?: Message) => void;
+}
+
+interface Argument {
+  name: string;
+  value: string;
+  type: string;
 }
 
 interface CommandOption {
