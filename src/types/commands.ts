@@ -22,7 +22,7 @@ interface Command {
 interface Argument {
   name: string;
   value: string;
-  type: string;
+  type: number;
   focused?: any; // TODO: Figure out what focused is
 }
 
