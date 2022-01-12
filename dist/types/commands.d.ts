@@ -17,7 +17,8 @@ interface Command {
 interface Argument {
     name: string;
     value: string;
-    type: string;
+    type: number;
+    focused?: any;
 }
 interface CommandOption {
     name: string;
