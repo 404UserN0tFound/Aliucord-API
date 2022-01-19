@@ -8,9 +8,9 @@ interface DialogOptions {
   secondaryConfirmText?: string;
   cancelText?: string;
   
-  onConfirm?: () => {};
-  onSecondaryConfirm?: () => {};
-  onCancel?: () => {};
+  onConfirm?: () => void;
+  onSecondaryConfirm?: () => void;
+  onCancel?: () => void;
 }
 
 /**
