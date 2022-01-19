@@ -5,9 +5,9 @@ interface DialogOptions {
     confirmColor?: string;
     secondaryConfirmText?: string;
     cancelText?: string;
-    onConfirm?: () => {};
-    onSecondaryConfirm?: () => {};
-    onCancel?: () => {};
+    onConfirm?: () => void;
+    onSecondaryConfirm?: () => void;
+    onCancel?: () => void;
 }
 declare function show(options?: DialogOptions): void;
 export { show };
