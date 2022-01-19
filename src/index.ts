@@ -1,13 +1,15 @@
 import * as Commands from "./modules/commands";
 import * as Clyde from "./modules/clyde";
-import * as Users from "./modules/users";
-import * as Native from "./modules/native";
 import * as Dialog from "./modules/dialog";
+import * as Native from "./modules/native";
+import * as Rest from "./modules/rest";
+import * as Users from "./modules/users";
 
 export {
-  Commands,
   Clyde,
-  Users,
+  Commands,
+  Dialog,
   Native,
-  Dialog
+  Rest,
+  Users,
 }
