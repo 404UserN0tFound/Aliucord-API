@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Native = exports.Users = exports.Clyde = exports.Commands = void 0;
+exports.Dialog = exports.Native = exports.Users = exports.Clyde = exports.Commands = void 0;
 const Commands = __importStar(require("./modules/commands"));
 exports.Commands = Commands;
 const Clyde = __importStar(require("./modules/clyde"));
@@ -28,3 +28,5 @@ const Users = __importStar(require("./modules/users"));
 exports.Users = Users;
 const Native = __importStar(require("./modules/native"));
 exports.Native = Native;
+const Dialog = __importStar(require("./modules/dialog"));
+exports.Dialog = Dialog;
