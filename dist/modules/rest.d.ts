@@ -9,7 +9,7 @@ interface RestResponse {
     text: string;
     status: number;
 }
-declare function get(data: RestOptions | string): Promise<RestOptions>;
+declare function get(data: RestOptions | string): Promise<RestResponse>;
 declare function post(data: RestOptions | string): Promise<RestResponse>;
 declare function put(data: RestOptions | string): Promise<RestResponse>;
 declare function patch(data: RestOptions | string): Promise<RestResponse>;
