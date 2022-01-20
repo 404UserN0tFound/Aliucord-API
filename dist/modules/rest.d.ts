@@ -6,7 +6,7 @@ interface RestResponse {
     ok: boolean;
     headers: Record<string, string>;
     body?: string;
-    test: string;
+    text: string;
     status: number;
 }
 declare function get(data: RestOptions | string): Promise<RestResponse>;
