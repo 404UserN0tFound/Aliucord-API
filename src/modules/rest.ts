@@ -9,7 +9,7 @@ interface RestResponse {
   ok: boolean;
   headers: Record<string, string>;
   body?: string;
-  test: string;
+  text: string;
   status: number;
 }
 
