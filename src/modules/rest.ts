@@ -2,7 +2,7 @@ const restModule = getModule(m => m.default?.getAPIBaseURL);
 
 interface RestOptions {
   url: string;
-  body: Record<string, any>;
+  body?: Record<string, any>;
 }
 
 interface RestResponse {
@@ -16,9 +16,9 @@ interface RestResponse {
 /**
  * Do a GET request
  */
-async function get(data: RestOptions | string): Promise<RestResponse> {
+async function get(data: RestOptions | string): Promise<RestOptions> {
   return new Promise((resolve, reject) => {
-    restModule.default.get(data).then((response: RestResponse) => {
+    restModule.default.get(data).then((response: any) => {
       resolve(response);
     }).catch((err: any) => {
       reject(err);
