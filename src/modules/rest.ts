@@ -16,9 +16,9 @@ interface RestResponse {
 /**
  * Do a GET request
  */
-async function get(data: RestOptions | string): Promise<RestOptions> {
+async function get(data: RestOptions | string): Promise<RestResponse> {
   return new Promise((resolve, reject) => {
-    restModule.default.get(data).then((response: any) => {
+    restModule.default.get(data).then((response: RestResponse) => {
       resolve(response);
     }).catch((err: any) => {
       reject(err);
