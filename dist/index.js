@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Users = exports.Rest = exports.Native = exports.Dialog = exports.Commands = exports.Clyde = void 0;
+exports.Users = exports.Storage = exports.Rest = exports.Native = exports.Dialog = exports.Commands = exports.Clyde = void 0;
 const Commands = __importStar(require("./modules/commands"));
 exports.Commands = Commands;
 const Clyde = __importStar(require("./modules/clyde"));
@@ -30,5 +30,7 @@ const Native = __importStar(require("./modules/native"));
 exports.Native = Native;
 const Rest = __importStar(require("./modules/rest"));
 exports.Rest = Rest;
+const Storage = __importStar(require("./modules/storage"));
+exports.Storage = Storage;
 const Users = __importStar(require("./modules/users"));
 exports.Users = Users;
