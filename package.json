@@ -12,6 +12,15 @@
     "eslint": "^8.6.0",
     "typescript": "^4.5.4"
   },
+  "exports": {
+    "./commands": "./dist/modules/commands.js",
+    "./clyde": "./dist/modules/clyde.js",
+    "./dialog": "./dist/modules/dialog.js",
+    "./native": "./dist/modules/native.js",
+    "./rest": "./dist/modules/rest.js",
+    "./storage": "./dist/modules/storage.js",
+    "./users": "./dist/modules/users.js"
+  },
   "scripts": {
     "build": "tsc"
   }
