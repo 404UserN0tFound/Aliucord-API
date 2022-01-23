@@ -5,7 +5,7 @@ interface RestOptions {
 interface RestResponse {
     ok: boolean;
     headers: Record<string, string>;
-    body?: string;
+    body?: string | Record<string, any>;
     text: string;
     status: number;
 }
