@@ -99,3 +99,12 @@ interface Role {
   icon?: string;
   unicodeEmoji?: string;
 }
+
+export {
+  Message,
+  Channel,
+  Permission,
+  ChannelPermission,
+  Guild,
+  Role
+}
