@@ -1,3 +1,5 @@
+import { Message } from "./common";
+
 interface Section {
   id: string;
   type: number;
@@ -81,12 +83,14 @@ enum InteractionTypes {
 export {
   Section,
   Command,
-  
+  CommandOption,
+  Argument,
+
   ApplicationCommandSectionType,
   ApplicationCommandTarget,
   ApplicationCommandType,
   ApplicationCommandPermissionType,
   ApplicationCommandOptionType,
-  
-  InteractionTypes
+
+  InteractionTypes,
 }
