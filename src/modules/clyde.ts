@@ -1,3 +1,5 @@
+import { getModule } from "./module";
+
 const clydeModule = getModule(m => m.default?.sendBotMessage, false);
 
 /**

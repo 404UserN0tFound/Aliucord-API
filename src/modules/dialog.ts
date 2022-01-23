@@ -1,3 +1,5 @@
+import { getModule } from "./module";
+
 const dialogModule = getModule((m) => m.default?.show).default;
 
 interface DialogOptions {

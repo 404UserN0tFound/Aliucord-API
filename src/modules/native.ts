@@ -1,3 +1,5 @@
+import { getModule } from "./module";
+
 const nativeModules = getModule(m => m.NativeModules).NativeModules;
 
 /**

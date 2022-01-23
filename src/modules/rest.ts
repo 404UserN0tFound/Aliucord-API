@@ -1,3 +1,5 @@
+import { getModule } from "./module";
+
 const restModule = getModule(m => m.default?.getAPIBaseURL);
 
 interface RestOptions {

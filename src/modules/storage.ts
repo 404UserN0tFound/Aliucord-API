@@ -1,3 +1,5 @@
+import { getModule } from "./module";
+
 const storageModule = getModule(m => m.getItem);
 
 /**

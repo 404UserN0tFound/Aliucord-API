@@ -1,4 +1,6 @@
-import type { Command } from "../types/commands";
+import { getModule } from "./module";
+import { Command } from "../types/commands";
+
 
 const commandsModule = getModule(m => m.getBuiltInCommands, false);
 

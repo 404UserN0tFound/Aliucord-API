@@ -1,4 +1,5 @@
-import type { Profile, User } from "../types/users";
+import { getModule } from "./module";
+import { Profile, User } from "../types/users";
 
 const userModule = getModule(m => m.fetchProfile);
 
