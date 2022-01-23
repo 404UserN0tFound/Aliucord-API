@@ -10,11 +10,8 @@
     "outDir": "./dist",
     "sourceMap": false,
     "declaration": true,
-    "typeRoots": [
-      "./src/types"
-    ]
   },
   "include": [
-    "./src"
+    "./src",
   ]
 }
