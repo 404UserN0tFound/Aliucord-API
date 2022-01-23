@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.removeItem = exports.setItem = exports.getItem = void 0;
-const storageModule = getModule(m => m.getItem);
+const module_1 = require("./module");
+const storageModule = (0, module_1.getModule)(m => m.getItem);
 async function getItem(name) {
     return new Promise((resolve, reject) => {
         storageModule.getItem(name).then((data) => {

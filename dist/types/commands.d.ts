@@ -1,3 +1,4 @@
+import { Message } from "./common";
 interface Section {
     id: string;
     type: number;
@@ -63,4 +64,4 @@ declare enum InteractionTypes {
     ApplicationCommand = 2,
     MessageComponent = 3
 }
-export { Section, Command, ApplicationCommandSectionType, ApplicationCommandTarget, ApplicationCommandType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes };
+export { Section, Command, CommandOption, Argument, ApplicationCommandSectionType, ApplicationCommandTarget, ApplicationCommandType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes, };

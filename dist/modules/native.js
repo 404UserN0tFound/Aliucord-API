@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getSystemVersion = exports.getDevice = exports.getBuild = exports.getVersion = exports.reloadDiscord = void 0;
-const nativeModules = getModule(m => m.NativeModules).NativeModules;
+const module_1 = require("./module");
+const nativeModules = (0, module_1.getModule)(m => m.NativeModules).NativeModules;
 function reloadDiscord() {
     nativeModules.BundleUpdaterManager.reload();
 }

@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getUser = exports.fetchProfile = exports.fetchCurrentUser = void 0;
-const userModule = getModule(m => m.fetchProfile);
+const module_1 = require("./module");
+const userModule = (0, module_1.getModule)(m => m.fetchProfile);
 async function fetchCurrentUser() {
     return new Promise((resolve, reject) => {
         userModule.fetchCurrentUser().then((user) => {
