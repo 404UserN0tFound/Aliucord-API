@@ -1,8 +1,6 @@
 {
   "name": "aliucord-api",
   "description": "Developer API for Aliucord-RN!",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
@@ -11,15 +9,6 @@
     "esbuild-plugin-d.ts": "^1.1.0",
     "eslint": "^8.6.0",
     "typescript": "^4.5.4"
-  },
-  "exports": {
-    "./commands": "./dist/modules/commands.js",
-    "./clyde": "./dist/modules/clyde.js",
-    "./dialog": "./dist/modules/dialog.js",
-    "./native": "./dist/modules/native.js",
-    "./rest": "./dist/modules/rest.js",
-    "./storage": "./dist/modules/storage.js",
-    "./users": "./dist/modules/users.js"
   },
   "scripts": {
     "build": "tsc"
