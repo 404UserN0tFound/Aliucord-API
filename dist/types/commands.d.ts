@@ -9,8 +9,8 @@ interface Command {
     applicationId: string;
     name: string;
     description: string;
-    target: ApplicationCommandTarget;
-    inputType: ApplicationCommandType;
+    type: ApplicationCommandType;
+    inputType: ApplicationCommandInputType;
     options?: CommandOption[];
     predicate?: (message: Message) => void;
     execute: (args: Argument[], message?: Message) => void;
@@ -32,12 +32,12 @@ declare enum ApplicationCommandSectionType {
     Guild = 1,
     DM = 2
 }
-declare enum ApplicationCommandTarget {
+declare enum ApplicationCommandType {
     Chat = 1,
     User = 2,
     Message = 3
 }
-declare enum ApplicationCommandType {
+declare enum ApplicationCommandInputType {
     BuiltIn = 0,
     BuiltInText = 1,
     BuiltInIntegration = 2,
@@ -64,4 +64,4 @@ declare enum InteractionTypes {
     ApplicationCommand = 2,
     MessageComponent = 3
 }
-export { Section, Command, CommandOption, Argument, ApplicationCommandSectionType, ApplicationCommandTarget, ApplicationCommandType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes, };
+export { Section, Command, CommandOption, Argument, ApplicationCommandSectionType, ApplicationCommandType, ApplicationCommandInputType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes, };
