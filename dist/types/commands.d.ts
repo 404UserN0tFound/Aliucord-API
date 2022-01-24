@@ -10,7 +10,7 @@ interface Command {
     name: string;
     description: string;
     target: ApplicationCommandTarget;
-    type: ApplicationCommandType;
+    inputType: ApplicationCommandType;
     options?: CommandOption[];
     predicate?: (message: Message) => void;
     execute: (args: Argument[], message?: Message) => void;
