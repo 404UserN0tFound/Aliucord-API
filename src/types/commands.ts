@@ -14,7 +14,7 @@ interface Command {
   description: string;
 
   target: ApplicationCommandTarget;
-  type: ApplicationCommandType;
+  inputType: ApplicationCommandType;
   options?: CommandOption[];
 
   predicate?: (message: Message) => void;
