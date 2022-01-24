@@ -13,8 +13,8 @@ interface Command {
   name: string;
   description: string;
 
-  target: ApplicationCommandTarget;
-  inputType: ApplicationCommandType;
+  type: ApplicationCommandType;
+  inputType: ApplicationCommandInputType;
   options?: CommandOption[];
 
   predicate?: (message: Message) => void;
@@ -41,13 +41,13 @@ enum ApplicationCommandSectionType {
   DM = 2,
 }
 
-enum ApplicationCommandTarget {
+enum ApplicationCommandType {
   Chat = 1,
   User = 2,
   Message = 3,
 }
 
-enum ApplicationCommandType {
+enum ApplicationCommandInputType {
   BuiltIn = 0,
   BuiltInText = 1,
   BuiltInIntegration = 2,
