@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InteractionTypes = exports.ApplicationCommandOptionType = exports.ApplicationCommandPermissionType = exports.ApplicationCommandType = exports.ApplicationCommandTarget = exports.ApplicationCommandSectionType = void 0;
+exports.InteractionTypes = exports.ApplicationCommandOptionType = exports.ApplicationCommandPermissionType = exports.ApplicationCommandInputType = exports.ApplicationCommandType = exports.ApplicationCommandSectionType = void 0;
 var ApplicationCommandSectionType;
 (function (ApplicationCommandSectionType) {
     ApplicationCommandSectionType[ApplicationCommandSectionType["BuiltIn"] = 0] = "BuiltIn";
@@ -8,22 +8,22 @@ var ApplicationCommandSectionType;
     ApplicationCommandSectionType[ApplicationCommandSectionType["DM"] = 2] = "DM";
 })(ApplicationCommandSectionType || (ApplicationCommandSectionType = {}));
 exports.ApplicationCommandSectionType = ApplicationCommandSectionType;
-var ApplicationCommandTarget;
-(function (ApplicationCommandTarget) {
-    ApplicationCommandTarget[ApplicationCommandTarget["Chat"] = 1] = "Chat";
-    ApplicationCommandTarget[ApplicationCommandTarget["User"] = 2] = "User";
-    ApplicationCommandTarget[ApplicationCommandTarget["Message"] = 3] = "Message";
-})(ApplicationCommandTarget || (ApplicationCommandTarget = {}));
-exports.ApplicationCommandTarget = ApplicationCommandTarget;
 var ApplicationCommandType;
 (function (ApplicationCommandType) {
-    ApplicationCommandType[ApplicationCommandType["BuiltIn"] = 0] = "BuiltIn";
-    ApplicationCommandType[ApplicationCommandType["BuiltInText"] = 1] = "BuiltInText";
-    ApplicationCommandType[ApplicationCommandType["BuiltInIntegration"] = 2] = "BuiltInIntegration";
-    ApplicationCommandType[ApplicationCommandType["Bot"] = 3] = "Bot";
-    ApplicationCommandType[ApplicationCommandType["Placeholder"] = 4] = "Placeholder";
+    ApplicationCommandType[ApplicationCommandType["Chat"] = 1] = "Chat";
+    ApplicationCommandType[ApplicationCommandType["User"] = 2] = "User";
+    ApplicationCommandType[ApplicationCommandType["Message"] = 3] = "Message";
 })(ApplicationCommandType || (ApplicationCommandType = {}));
 exports.ApplicationCommandType = ApplicationCommandType;
+var ApplicationCommandInputType;
+(function (ApplicationCommandInputType) {
+    ApplicationCommandInputType[ApplicationCommandInputType["BuiltIn"] = 0] = "BuiltIn";
+    ApplicationCommandInputType[ApplicationCommandInputType["BuiltInText"] = 1] = "BuiltInText";
+    ApplicationCommandInputType[ApplicationCommandInputType["BuiltInIntegration"] = 2] = "BuiltInIntegration";
+    ApplicationCommandInputType[ApplicationCommandInputType["Bot"] = 3] = "Bot";
+    ApplicationCommandInputType[ApplicationCommandInputType["Placeholder"] = 4] = "Placeholder";
+})(ApplicationCommandInputType || (ApplicationCommandInputType = {}));
+exports.ApplicationCommandInputType = ApplicationCommandInputType;
 var ApplicationCommandPermissionType;
 (function (ApplicationCommandPermissionType) {
     ApplicationCommandPermissionType[ApplicationCommandPermissionType["Role"] = 1] = "Role";
