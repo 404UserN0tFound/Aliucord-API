@@ -87,8 +87,8 @@ export {
   Argument,
 
   ApplicationCommandSectionType,
-  ApplicationCommandTarget,
   ApplicationCommandType,
+  ApplicationCommandInputType,
   ApplicationCommandPermissionType,
   ApplicationCommandOptionType,
 
