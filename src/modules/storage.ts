@@ -2,21 +2,39 @@
  * Get an item from storage
  */
 async function getItem(name: string): Promise<string | null> {
-  return window.aliucord.storage.getItem(name);
+  return new Promise((resolve, reject) => {
+    window.aliucord.storage.getItem(name).then((data: string | null) => {
+      resolve(data);
+    }).catch((err: any) => {
+      reject(err);
+    });
+  });
 }
 
 /**
  * Set an item in storage
  */
- async function setItem(name: string, value: string): Promise<void> {
-  return window.aliucord.storage.setItem(name, value);
+ async function setItem(name: string, value: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    window.aliucord.storage.setItem(name, value).then((data: string | null) => {
+      resolve(data);
+    }).catch((err: any) => {
+      reject(err);
+    });
+  });
 }
 
 /**
  * Remove an item from storage
  */
 async function removeItem(name: string): Promise<void> {
-  return window.aliucord.storage.removeItem(name);
+  return new Promise((resolve, reject) => {
+    window.aliucord.storage.removeItem(name).then(() => {
+      resolve();
+    }).catch((err: any) => {
+      reject(err);
+    });
+  });
 }
 
 export {
