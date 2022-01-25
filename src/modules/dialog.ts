@@ -19,7 +19,7 @@ interface DialogOptions {
  * Show a dialog box
  */
 function show(options: DialogOptions = { title: "Default dialog" }) {
-  dialogModule.show(options);
+  window["aliucord"].dialog.show(options);
 }
 
 export {

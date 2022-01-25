@@ -1,25 +1,21 @@
-import { getModule } from "./module";
-
-const tokenModule = getModule(m => m.default?.setToken);
-
 function getToken(): string {
-  return tokenModule.default.getToken();
+  return window.aliucord.token.getToken();
 }
 
 function setToken(token: string): string {
-  return tokenModule.default.setToken(token);
+  return window.aliucord.token.setToken(token);
 }
 
 function hideToken(): void {
-  tokenModule.default.hideToken();
+  window.aliucord.token.hideToken();
 }
 
 function showToken(): void {
-  tokenModule.default.showToken();
+  window.aliucord.token.showToken();
 }
 
 function removeToken(): void {
-  tokenModule.default.removeToken();
+  window.aliucord.token.removeToken();
 }
 
 export {

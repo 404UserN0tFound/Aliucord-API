@@ -1,25 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getSystemVersion = exports.getDevice = exports.getBuild = exports.getVersion = exports.reloadDiscord = void 0;
-const module_1 = require("./module");
-const nativeModules = (0, module_1.getModule)(m => m.NativeModules).NativeModules;
 function reloadDiscord() {
-    nativeModules.BundleUpdaterManager.reload();
+    window.aliucord.native.reloadDiscord();
 }
 exports.reloadDiscord = reloadDiscord;
 function getVersion() {
-    return nativeModules.InfoDictionaryManager.Version;
+    return window.aliucord.native.Version;
 }
 exports.getVersion = getVersion;
 function getBuild() {
-    return nativeModules.InfoDictionaryManager.Build;
+    return window.aliucord.native.Build;
 }
 exports.getBuild = getBuild;
 function getDevice() {
-    return nativeModules.DCDDeviceManager.device;
+    return window.aliucord.native.device;
 }
 exports.getDevice = getDevice;
 function getSystemVersion() {
-    return nativeModules.DCDDeviceManager.systemVersion;
+    return window.aliucord.native.systemVersion;
 }
 exports.getSystemVersion = getSystemVersion;

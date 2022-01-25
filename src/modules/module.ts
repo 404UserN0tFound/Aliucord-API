@@ -7,13 +7,13 @@
 function getModule(filter: (module: any) => boolean, exports?: true): ExportedModule;
 function getModule(filter: (module: any) => boolean, exports?: false): Module;
 function getModule(filter: (module: any) => boolean, exports = true): Module | ExportedModule {
-  const module = window.getModule(filter, exports);
+  const module = window.aliucord.getModule(filter, exports);
   return module;
 }
 
 declare global {
   interface Window {
-    getModule: (filter: (module: any) => boolean, exports?: boolean) => Module | ExportedModule;
+    aliucord: any;
   }
 }
 

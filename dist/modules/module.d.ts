@@ -2,7 +2,7 @@ declare function getModule(filter: (module: any) => boolean, exports?: true): Ex
 declare function getModule(filter: (module: any) => boolean, exports?: false): Module;
 declare global {
     interface Window {
-        getModule: (filter: (module: any) => boolean, exports?: boolean) => Module | ExportedModule;
+        aliucord: any;
     }
 }
 declare interface Module {

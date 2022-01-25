@@ -1,40 +1,36 @@
-import { getModule } from "./module";
-
-const nativeModules = getModule(m => m.NativeModules).NativeModules;
-
 /**
  * This function will reload Discord entirely, including reloading plugins
  */
 function reloadDiscord() {
-  nativeModules.BundleUpdaterManager.reload();
+  window.aliucord.native.reloadDiscord();
 }
 
 /**
  * Get the Discord's version
  */
 function getVersion() {
-  return nativeModules.InfoDictionaryManager.Version;
+  return window.aliucord.native.Version;
 }
 
 /**
  * Get the Discord's build number
  */
 function getBuild() {
-  return nativeModules.InfoDictionaryManager.Build;
+  return window.aliucord.native.Build;
 }
 
 /**
  * Get the user's device
  */
 function getDevice() {
-  return nativeModules.DCDDeviceManager.device;
+  return window.aliucord.native.device;
 }
 
 /**
  * Get the user's device version
  */
 function getSystemVersion() {
-  return nativeModules.DCDDeviceManager.systemVersion;
+  return window.aliucord.native.systemVersion;
 }
 
 export {
