@@ -7,7 +7,7 @@ const AliucordSectionID = "-3";
  * Add new built-in commands to Discord
  */
 function registerCommands(commands: Command[]) {
-  window.aliucord.comands.registerCommands(commands);
+  window.aliucord.commands.registerCommands(commands);
 }
 
 export {
