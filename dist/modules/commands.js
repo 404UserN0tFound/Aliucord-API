@@ -4,6 +4,6 @@ exports.registerCommands = exports.AliucordSectionID = void 0;
 const AliucordSectionID = "-3";
 exports.AliucordSectionID = AliucordSectionID;
 function registerCommands(commands) {
-    window.aliucord.comands.registerCommands(commands);
+    window.aliucord.commands.registerCommands(commands);
 }
 exports.registerCommands = registerCommands;
