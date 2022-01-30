@@ -29,10 +29,16 @@ interface Argument {
 }
 
 interface CommandOption {
-  name: string,
-  description: string,
-  type: ApplicationCommandOptionType,
-  required?: boolean,
+  name: string;
+  description: string;
+  type: ApplicationCommandOptionType;
+  required?: boolean;
+  choices?: CommandChoice[];
+}
+
+interface CommandChoice {
+  name: string;
+  value: string;
 }
 
 enum ApplicationCommandSectionType {

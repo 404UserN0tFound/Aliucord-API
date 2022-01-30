@@ -26,6 +26,11 @@ interface CommandOption {
     description: string;
     type: ApplicationCommandOptionType;
     required?: boolean;
+    choices?: CommandChoice[];
+}
+interface CommandChoice {
+    name: string;
+    value: string;
 }
 declare enum ApplicationCommandSectionType {
     BuiltIn = 0,
