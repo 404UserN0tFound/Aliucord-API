@@ -18,10 +18,10 @@ interface DialogOptions {
 /**
  * Show a dialog box
  */
-function show(options: DialogOptions = { title: "Default dialog" }) {
-  window["aliucord"].dialog.show(options);
+function showDialog(options: DialogOptions = { title: "Default dialog" }) {
+  window["aliucord"].dialog.showDialog(options);
 }
 
 export {
-  show
+  showDialog
 }

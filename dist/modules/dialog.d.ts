@@ -9,5 +9,5 @@ interface DialogOptions {
     onSecondaryConfirm?: () => void;
     onCancel?: () => void;
 }
-declare function show(options?: DialogOptions): void;
-export { show };
+declare function showDialog(options?: DialogOptions): void;
+export { showDialog };
