@@ -1,4 +1,5 @@
 import { Command } from "../types/commands";
-declare const AliucordSectionID = "-3";
-declare function registerCommands(commands: Command[]): void;
-export { AliucordSectionID, registerCommands };
+declare const AliucordSectionID = "aliucord";
+declare function registerCommands(caller: string, commands: Command[]): void;
+declare function unregisterCommands(caller: string): void;
+export { AliucordSectionID, registerCommands, unregisterCommands };
