@@ -19,25 +19,25 @@ interface Patch {
   unpatchAll: () => void;
 }
 
-function createPatch(name: string): Patch {
-  return window.aliucord.patcher.createPatch(name);
+function create(name: string): Patch {
+  return window.aliucord.patcher.create(name);
 }
 
-function patchBefore(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  window.aliucord.patcher.patchBefore(caller, mdl, func, callback);
+function before(caller: string, mdl: mdl, func: string, callback: patchCallback) {
+  window.aliucord.patcher.before(caller, mdl, func, callback);
 }
 
-function patchInstead(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  window.aliucord.patcher.patchInstead(caller, mdl, func, callback);
+function instead(caller: string, mdl: mdl, func: string, callback: patchCallback) {
+  window.aliucord.patcher.instead(caller, mdl, func, callback);
 }
 
-function patchAfter(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  window.aliucord.patcher.patchAfter(caller, mdl, func, callback);
+function after(caller: string, mdl: mdl, func: string, callback: patchCallback) {
+  window.aliucord.patcher.after(caller, mdl, func, callback);
 }
 
 export {
-  createPatch,
-  patchBefore,
-  patchInstead,
-  patchAfter
+  create,
+  before,
+  instead,
+  after
 };
