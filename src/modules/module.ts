@@ -11,6 +11,18 @@ function getModule(filter: (module: any) => boolean, exports = true): Module | E
   return module;
 }
 
+function getModules(filter: (module: any) => boolean, first = false): number[] {
+  return window.aliucord.getModules(filter, first);
+}
+
+function getModuleByProps(...props: string[]): ExportedModule {
+  return window.aliucord.getModuleByProps(props);
+}
+
+function getModuleByIndex(id: string): Module {
+  return window.aliucord.getModuleByIndex(id);
+}
+
 declare global {
   interface Window {
     aliucord: any;
@@ -29,4 +41,7 @@ declare interface ExportedModule {
 
 export {
   getModule,
+  getModules,
+  getModuleByProps,
+  getModuleByIndex
 }

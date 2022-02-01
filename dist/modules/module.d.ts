@@ -1,5 +1,8 @@
 declare function getModule(filter: (module: any) => boolean, exports?: true): ExportedModule;
 declare function getModule(filter: (module: any) => boolean, exports?: false): Module;
+declare function getModules(filter: (module: any) => boolean, first?: boolean): number[];
+declare function getModuleByProps(...props: string[]): ExportedModule;
+declare function getModuleByIndex(id: string): Module;
 declare global {
     interface Window {
         aliucord: any;
@@ -15,4 +18,4 @@ declare interface ExportedModule {
     };
     [key: string]: any;
 }
-export { getModule, };
+export { getModule, getModules, getModuleByProps, getModuleByIndex };
