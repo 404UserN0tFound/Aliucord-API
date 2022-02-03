@@ -24,15 +24,15 @@ function create(name: string): Patch {
 }
 
 function before(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  window.aliucord.patcher.before(caller, mdl, func, callback);
+  return window.aliucord.patcher.before(caller, mdl, func, callback);
 }
 
 function instead(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  window.aliucord.patcher.instead(caller, mdl, func, callback);
+  return window.aliucord.patcher.instead(caller, mdl, func, callback);
 }
 
 function after(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  window.aliucord.patcher.after(caller, mdl, func, callback);
+  return window.aliucord.patcher.after(caller, mdl, func, callback);
 }
 
 export {

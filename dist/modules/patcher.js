@@ -6,14 +6,14 @@ function create(name) {
 }
 exports.create = create;
 function before(caller, mdl, func, callback) {
-    window.aliucord.patcher.before(caller, mdl, func, callback);
+    return window.aliucord.patcher.before(caller, mdl, func, callback);
 }
 exports.before = before;
 function instead(caller, mdl, func, callback) {
-    window.aliucord.patcher.instead(caller, mdl, func, callback);
+    return window.aliucord.patcher.instead(caller, mdl, func, callback);
 }
 exports.instead = instead;
 function after(caller, mdl, func, callback) {
-    window.aliucord.patcher.after(caller, mdl, func, callback);
+    return window.aliucord.patcher.after(caller, mdl, func, callback);
 }
 exports.after = after;

@@ -15,7 +15,7 @@ interface Patch {
     unpatchAll: () => void;
 }
 declare function create(name: string): Patch;
-declare function before(caller: string, mdl: mdl, func: string, callback: patchCallback): void;
-declare function instead(caller: string, mdl: mdl, func: string, callback: patchCallback): void;
-declare function after(caller: string, mdl: mdl, func: string, callback: patchCallback): void;
+declare function before(caller: string, mdl: mdl, func: string, callback: patchCallback): any;
+declare function instead(caller: string, mdl: mdl, func: string, callback: patchCallback): any;
+declare function after(caller: string, mdl: mdl, func: string, callback: patchCallback): any;
 export { create, before, instead, after };
