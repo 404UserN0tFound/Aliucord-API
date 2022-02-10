@@ -11,9 +11,6 @@
     "typescript": "^4.5.4"
   },
   "main": "dist/index.js",
-  "exports": {
-    "./module": "./dist/modules/module.js"
-  },
   "scripts": {
     "build": "tsc"
   }
