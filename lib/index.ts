@@ -10,4 +10,18 @@ import * as Themes from "./modules/themes";
 import * as Toast from "./modules/toast";
 import * as Token from "./modules/token";
 import * as Users from "./modules/users";
-export { Clyde, Commands, Dialog, Module, Native, Patcher, Rest, Storage, Themes, Toast, Token, Users, };
+
+export {
+  Clyde,
+  Commands,
+  Dialog,
+  Module,
+  Native,
+  Patcher,
+  Rest,
+  Storage,
+  Themes,
+  Toast,
+  Token,
+  Users,
+}

@@ -1,20 +1,15 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.InteractionTypes = exports.ApplicationCommandOptionType = exports.ApplicationCommandPermissionType = exports.ApplicationCommandInputType = exports.ApplicationCommandType = exports.ApplicationCommandSectionType = void 0;
 var ApplicationCommandSectionType;
 (function (ApplicationCommandSectionType) {
     ApplicationCommandSectionType[ApplicationCommandSectionType["BuiltIn"] = 0] = "BuiltIn";
     ApplicationCommandSectionType[ApplicationCommandSectionType["Guild"] = 1] = "Guild";
     ApplicationCommandSectionType[ApplicationCommandSectionType["DM"] = 2] = "DM";
 })(ApplicationCommandSectionType || (ApplicationCommandSectionType = {}));
-exports.ApplicationCommandSectionType = ApplicationCommandSectionType;
 var ApplicationCommandType;
 (function (ApplicationCommandType) {
     ApplicationCommandType[ApplicationCommandType["Chat"] = 1] = "Chat";
     ApplicationCommandType[ApplicationCommandType["User"] = 2] = "User";
     ApplicationCommandType[ApplicationCommandType["Message"] = 3] = "Message";
 })(ApplicationCommandType || (ApplicationCommandType = {}));
-exports.ApplicationCommandType = ApplicationCommandType;
 var ApplicationCommandInputType;
 (function (ApplicationCommandInputType) {
     ApplicationCommandInputType[ApplicationCommandInputType["BuiltIn"] = 0] = "BuiltIn";
@@ -23,13 +18,11 @@ var ApplicationCommandInputType;
     ApplicationCommandInputType[ApplicationCommandInputType["Bot"] = 3] = "Bot";
     ApplicationCommandInputType[ApplicationCommandInputType["Placeholder"] = 4] = "Placeholder";
 })(ApplicationCommandInputType || (ApplicationCommandInputType = {}));
-exports.ApplicationCommandInputType = ApplicationCommandInputType;
 var ApplicationCommandPermissionType;
 (function (ApplicationCommandPermissionType) {
     ApplicationCommandPermissionType[ApplicationCommandPermissionType["Role"] = 1] = "Role";
     ApplicationCommandPermissionType[ApplicationCommandPermissionType["User"] = 2] = "User";
 })(ApplicationCommandPermissionType || (ApplicationCommandPermissionType = {}));
-exports.ApplicationCommandPermissionType = ApplicationCommandPermissionType;
 var ApplicationCommandOptionType;
 (function (ApplicationCommandOptionType) {
     ApplicationCommandOptionType[ApplicationCommandOptionType["SubCommand"] = 1] = "SubCommand";
@@ -43,10 +36,9 @@ var ApplicationCommandOptionType;
     ApplicationCommandOptionType[ApplicationCommandOptionType["Mentionnable"] = 9] = "Mentionnable";
     ApplicationCommandOptionType[ApplicationCommandOptionType["Number"] = 10] = "Number";
 })(ApplicationCommandOptionType || (ApplicationCommandOptionType = {}));
-exports.ApplicationCommandOptionType = ApplicationCommandOptionType;
 var InteractionTypes;
 (function (InteractionTypes) {
     InteractionTypes[InteractionTypes["ApplicationCommand"] = 2] = "ApplicationCommand";
     InteractionTypes[InteractionTypes["MessageComponent"] = 3] = "MessageComponent";
 })(InteractionTypes || (InteractionTypes = {}));
-exports.InteractionTypes = InteractionTypes;
+export { ApplicationCommandSectionType, ApplicationCommandType, ApplicationCommandInputType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes, };
