@@ -27,7 +27,7 @@ interface Channel {
   messageCount?: number;
   memberCount?: number;
   memberIdsPreview?: any;
-  member?: any; 
+  member?: any;
   threadMetadata?: any;
 }
 
@@ -100,11 +100,44 @@ interface Role {
   unicodeEmoji?: string;
 }
 
-export {
-  Message,
-  Channel,
-  Permission,
-  ChannelPermission,
-  Guild,
-  Role
+interface User {
+  id: string;
+  discriminator: string;
+  username: string;
+  bio: string;
+  avatar: string;
+  banner: string;
+  accentColor?: null | string;
+  publicFlags: number;
+  flags: number;
+  email?: string;
+  verified?: boolean;
+  bot?: boolean;
+  system?: boolean;
+  mfaEnabled?: boolean;
+  mobile?: boolean;
+  desktop?: boolean;
+  premiumType?: number;
+  purchasedFlags?: number;
+  premiumUsageFlags?: number;
+  phone?: string;
+  nsfwAllowed?: boolean;
+  guildMemberAvatars?: unknown;
 }
+
+interface Account {
+  type: string;
+  id: string;
+  name: string;
+  verified: boolean;
+}
+
+interface Profile {
+  user: User;
+  connected_accounts: Account[];
+  premium_since: string;
+  premium_guild_since: string;
+  mutual_guilds: Guild[];
+}
+
+export { Message, Channel, Permission, ChannelPermission, Guild, Role, User, Account, Profile };

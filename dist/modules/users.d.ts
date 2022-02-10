@@ -1,4 +1,4 @@
-import { Profile, User } from "../types/users";
+import { Profile, User } from "./common";
 declare function fetchCurrentUser(): Promise<User>;
 declare function fetchProfile(userID: string): Promise<Profile>;
 declare function getUser(userID: string): Promise<User>;

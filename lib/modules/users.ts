@@ -1,4 +1,4 @@
-import { Profile, User } from "../types/users";
+import { Profile, User } from "./common";
 
 /**
  * Fetch currently logged in user
