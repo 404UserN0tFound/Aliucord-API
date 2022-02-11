@@ -72,4 +72,5 @@ declare enum InteractionTypes {
 declare const AliucordSectionID = "aliucord";
 declare function registerCommands(caller: string, commands: Command[]): void;
 declare function unregisterCommands(caller: string): void;
-export { AliucordSectionID, registerCommands, unregisterCommands, Section, Command, Argument, CommandOption, CommandChoice, ApplicationCommandSectionType, ApplicationCommandType, ApplicationCommandInputType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes };
+export { AliucordSectionID, registerCommands, unregisterCommands };
+export { Section, Command, Argument, CommandOption, CommandChoice, ApplicationCommandSectionType, ApplicationCommandType, ApplicationCommandInputType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes };

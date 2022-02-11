@@ -106,8 +106,10 @@ function unregisterCommands(caller: string) {
 export {
   AliucordSectionID,
   registerCommands,
-  unregisterCommands,
+  unregisterCommands
+};
 
+export {
   Section,
   Command,
   Argument,
@@ -119,5 +121,6 @@ export {
   ApplicationCommandInputType,
   ApplicationCommandPermissionType,
   ApplicationCommandOptionType,
+  
   InteractionTypes
-}
+};

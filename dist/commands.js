@@ -48,4 +48,5 @@ function registerCommands(caller, commands) {
 function unregisterCommands(caller) {
     window.aliucord.commands.unregisterCommands(caller);
 }
-export { AliucordSectionID, registerCommands, unregisterCommands, ApplicationCommandSectionType, ApplicationCommandType, ApplicationCommandInputType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes };
+export { AliucordSectionID, registerCommands, unregisterCommands };
+export { ApplicationCommandSectionType, ApplicationCommandType, ApplicationCommandInputType, ApplicationCommandPermissionType, ApplicationCommandOptionType, InteractionTypes };

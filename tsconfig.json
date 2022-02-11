@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "ES2015",
+    "module": "es2020",
     "esModuleInterop": true,
     "lib": ["ES2019", "DOM"],
     "target": "ES2019",
@@ -10,8 +10,9 @@
     "outDir": "./dist",
     "sourceMap": false,
     "declaration": true,
+    "baseUrl": ".",
   },
   "include": [
     "./lib",
-  ]
+  ],
 }
