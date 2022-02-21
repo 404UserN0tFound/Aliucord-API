@@ -3,6 +3,9 @@ type mdl = Function | object;
 
 type patchCallback = (self: any, args: any[], res: any) => void;
 
+export interface Patchable {
+  unpatchAll: () => void;
+}
 interface Patcher {
   caller: string;
   type: string;
@@ -11,28 +14,36 @@ interface Patcher {
   unpatch: () => void;
 }
 
-interface Patch {
+export interface Patch extends Patchable {
   getPatchesByCaller: (id: string) => Patcher[],
   before: (...args: any[]) => void;
   instead: (...args: any[]) => void;
   after: (...args: any[])  => void;
-  unpatchAll: () => void;
 }
 
 function create(name: string): Patch {
   return window.aliucord.patcher.create(name);
 }
 
-function before(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  return window.aliucord.patcher.before(caller, mdl, func, callback);
+function before(caller: string, mdl: mdl, func: string, callback: patchCallback): Patchable {
+  const unpatch = window.aliucord.patcher.before(caller, mdl, func, callback);
+  return {
+    unpatchAll: unpatch
+  };
 }
 
-function instead(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  return window.aliucord.patcher.instead(caller, mdl, func, callback);
+function instead(caller: string, mdl: mdl, func: string, callback: patchCallback): Patchable {
+  const unpatch = window.aliucord.patcher.instead(caller, mdl, func, callback);
+  return {
+    unpatchAll: unpatch
+  };
 }
 
-function after(caller: string, mdl: mdl, func: string, callback: patchCallback) {
-  return window.aliucord.patcher.after(caller, mdl, func, callback);
+function after(caller: string, mdl: mdl, func: string, callback: patchCallback): Patchable {
+  const unpatch = window.aliucord.patcher.after(caller, mdl, func, callback);
+  return {
+    unpatchAll: unpatch
+  };
 }
 
 export {
