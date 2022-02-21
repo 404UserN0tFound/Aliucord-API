@@ -4,8 +4,8 @@ import { Patchable } from "./patcher";
 interface Plugin {
   name: string;
 
-  commands: Command[];
-  patches: Patchable[];
+  commands?: Command[];
+  patches?: Patchable[];
 
   onStart: () => void;
   onStop: () => void;
