@@ -1,14 +1,20 @@
 import { Message } from "./common";
+interface HasName {
+    name: string;
+    displayName: string;
+}
+interface HasDescription {
+    description: string;
+    displayDescription: string;
+}
 interface Section {
     id: string;
     type: number;
     name: string;
 }
-interface Command {
+interface Command extends HasName, HasDescription {
     id: string;
     applicationId: string;
-    name: string;
-    description: string;
     type: ApplicationCommandType;
     inputType: ApplicationCommandInputType;
     options?: CommandOption[];
@@ -21,15 +27,12 @@ interface Argument {
     type: number;
     focused?: any;
 }
-interface CommandOption {
-    name: string;
-    description: string;
+interface CommandOption extends HasName, HasDescription {
     type: ApplicationCommandOptionType;
     required?: boolean;
     choices?: CommandChoice[];
 }
-interface CommandChoice {
-    name: string;
+interface CommandChoice extends HasName {
     value: string;
 }
 declare enum ApplicationCommandSectionType {
